@@ -1,19 +1,26 @@
 {
-  "name": "chefs-collection",
+  "name": "chefs-corner",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.4"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/leninyang/Chefs-Collection.git"
+    "url": "git+https://github.com/leninyang/Chefs-Corner.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/leninyang/Chefs-Collection/issues"
+    "url": "https://github.com/leninyang/Chefs-Corner/issues"
   },
-  "homepage": "https://github.com/leninyang/Chefs-Collection#readme"
+  "homepage": "https://github.com/leninyang/Chefs-Corner#readme"
 }
