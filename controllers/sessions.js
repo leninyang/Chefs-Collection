@@ -16,7 +16,7 @@ router.get('/new', function(req, res){
     res.render('sessions/new.ejs');
 });
 
-// SESSIONS CREATE ROUTE | Login/Create/Match/Encrypt Password
+// SESSIONS CREATE ROUTE | Create User/Match/Encrypt Password
 router.post('/', function(req, res){
   // Search by username
   User.findOne({ username: req.body.username }, function(err, foundUser){

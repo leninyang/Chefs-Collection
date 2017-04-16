@@ -4,15 +4,15 @@
 <!-- ====================== -->
 <html>
   <head>
-    <meta charset="utf-8">
-    <title></title>
+    <% include ../partials/head %>
   </head>
   <body>
+    <% include ../partials/nav %>
     <h1>Create User</h1>
     <h2>User's new.ejs</h2>
     <form action="/users" method="POST">
       <input type="text" name="username" placeholder="username">
-      <input type="password" name="password">
+      <input type="password" name="password" placeholder="password">
       <input type="submit" value="Create User">
     </form>
   </body>
