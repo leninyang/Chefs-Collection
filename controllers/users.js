@@ -42,6 +42,12 @@ router.get('/:id/edit', function(req, res) {
   });
 });
 
+// 7) PUT ROUTE
+router.put('/:id', function(req, res) {
+  User.findByIdAndUpdate(req.params.id, req.body, function() {
+    res.redirect('/users')
+  })
+})
 
 // 2) CREATE ROUTE | Create user data in DataBase
 router.post('/', function(req, res){
@@ -57,5 +63,30 @@ router.delete('/:id', function(req, res) {
     res.redirect('/users')
   });
 });
+
+// //=========================
+// // SEED
+// //=========================
+// router.get('/seed/newusers', function(req, res) {
+//
+// 	var newUsers = [
+// 		{
+// 			name: "Minion 1",
+//       password: "banana"
+//       recipe:
+// 		}, {
+// 			name: "Minion 2",
+//       password: "banana"
+// 	  }, {
+// 			name: "Minion 3",
+//       password: "banana"
+// 	];
+//
+// 	User.create(newUsers, function(err) {
+// 		  console.log("SEED: NEW USERS CREATED!");
+// 		  res.redirect('/users');
+// 	});
+// });
+
 
 module.exports = router;

@@ -45,7 +45,7 @@ app.get('/app', function(req, res){
   if (req.session.currentuser !== undefined) { // Disallow Users Not Logged In From entering "Special" Page
     res.send('the party');
   } else {
-    res.redirect('/session/new');
+    res.redirect('/');
   }
 });
 
