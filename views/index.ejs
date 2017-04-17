@@ -22,6 +22,9 @@
         <% } else { %>
     <!-- Create Log Out Button for Logged In Users on Index Page -->
           <li>
+            <a href="/recipes/new">Create New Recipe</a>
+          </li>
+          <li>
             <form action="/sessions?_method=DELETE" method="POST">
             <input type="submit" value="Logout"/>
             </form>
