@@ -23,5 +23,21 @@ router.get('/', function(req, res) {
   });
 });
 
+// 4) RECIPES SHOW ROUTE
+router.get('/:id', function(req, res) {
+  Recipe.findById(req.params.id, function(err, foundRecipe) {
+    res.render('recipes/show.ejs', {
+      recipe: foundRecipe
+    });
+  });
+});
+
+// 3) RECIPES CREATE ROUTE | CREATES PHOTO DATA IN DB
+router.post('/', function(req, res) {
+  Recipe.create(req.body, function(err, createdRecipe) {
+    res.redirect('/recipes')
+  });
+});
+
 
 module.exports = router;
