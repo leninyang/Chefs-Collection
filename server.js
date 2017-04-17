@@ -27,7 +27,10 @@ var usersController = require('./controllers/users.js');
 app.use('/users', usersController);
 
 var sessionsController = require('./controllers/sessions.js');
-app.use('/sessions', sessionsController)
+app.use('/sessions', sessionsController);
+
+var recipesController = require('./controllers/recipes.js');
+app.use('/recipes', recipesController);
 
 //=========================
 // ROUTES

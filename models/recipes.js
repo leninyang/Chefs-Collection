@@ -1,6 +1,8 @@
 //=========================
 // RECIPE SCHEMA
 //=========================
+var mongoose = require('mongoose');
+
 var recipeSchema = mongoose.Schema({
   title: {type: String, required: true},
   img: {type: String, required: true},
