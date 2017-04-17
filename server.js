@@ -56,6 +56,7 @@ app.get('/app', function(req, res){
 
 // START MONGO
 mongoose.connect(mongoDBURI);
+
 mongoose.connection.once('open', function(){
     console.log('connected to mongo');
 });
