@@ -39,5 +39,12 @@ router.post('/', function(req, res) {
   });
 });
 
+// 5) DELETE ROUTE
+router.delete('/:id', function(req, res) {
+  User.findByIdAndRemove(req.params.id, function() {
+    res.redirect('/recipes');
+  });
+});
+
 
 module.exports = router;
