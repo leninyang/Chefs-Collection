@@ -8,6 +8,8 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 var methodOverride = require('method-override');
 
+var port = process.env.PORT || 3000;
+var mongoDBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/project2';
 
 //=========================
 // MIDDLEWARE
@@ -53,11 +55,11 @@ app.get('/app', function(req, res){
 });
 
 // START MONGO
-mongoose.connect('mongodb://localhost:27017/project2');
+mongoose.connect(mongoDBURI);
 mongoose.connection.once('open', function(){
     console.log('connected to mongo');
 });
 
-app.listen(3000, function() {
-  console.log('listening');
+app.listen(port, function() {
+  console.log('listening on port ' + port);
 });
